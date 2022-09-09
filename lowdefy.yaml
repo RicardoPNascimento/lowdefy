@@ -1,0 +1,86 @@
+
+lowdefy: 3.23.3
+name: Lowdefy starter
+
+connections:
+  - id: google_sheet
+    type: GoogleSheet
+    properties:
+      client_email:
+        _secret: SHEETS_CLIENT_EMAIL
+      private_key:
+        _base64.decode:
+          _secret: SHEETS_PRIVATE_KEY
+      sheetIndex: 0
+      spreadsheetId: 1d5r1hEnqHG0d2PBXMTrvFhFnrXrxo_OQBg0X1VEsbFk
+      write: true
+
+
+menus:
+  - id: default
+    links:
+      - id: welcome
+        type: MenuLink
+        properties:
+          icon: HomeOutlined
+          title: Home
+        pageId: Welcome
+      - id: new-ticket
+        type: MenuLink
+        properties:
+          icon: AlertOutlined
+          title: New ticket
+        pageId: new-ticket
+
+pages:
+  - _ref: new-ticket.yaml
+  - id: Welcome
+    type: PageHeaderMenu
+    properties:
+      title: Welcome
+    areas:
+      content:
+        justify: center
+        blocks:
+          - id: content_card
+            type: Card
+            style:
+              maxWidth: 800
+            blocks:
+              - id: content
+                type: Result
+                properties:
+                    
+                  subTitle: We are excited to see what you are going to build
+                              chuva
+                  icon:
+                    name: HeartTwoTone
+                    color: '#f00'
+                areas:
+                  extra:
+                    blocks:
+                      - id: docs_button
+                        type: Button
+                        properties:
+                          size: large
+                          title: Let's build something
+                          color: '#1890ff'
+                        events:
+                          onClick:
+                            - id: link_to_docs
+                              type: Link
+                              params:
+                                url: https://docs.lowdefy.com
+                                newTab: true
+  
+      footer:
+        blocks:
+          - id: footer
+            type: Paragraph
+            properties:
+              type: secondary
+              content: |
+                Made by a Lowdefy 🤖
+  
+  
+

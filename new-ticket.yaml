@@ -65,7 +65,7 @@ blocks:
           # Show a warning that shows before validate is called
           # and does not block Validate action.
           - status: warning
-            message: If you did not restart your device, we will ask you to restart it.
+            message: If you did not restart your device, we will ask you to restart it okay.
             pass:
               _eq:
                 - _state: confirm_restart

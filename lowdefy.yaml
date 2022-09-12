@@ -40,7 +40,7 @@ menus:
       - id: color.yaml
         type: MenuLink
         properties:
-          icon: AlertOutlined
+          icon: CodepenSquareFilled
           title: Color
         pageId: color  
 

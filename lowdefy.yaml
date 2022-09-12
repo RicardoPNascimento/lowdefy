@@ -37,8 +37,15 @@ menus:
           icon: AlertOutlined
           title: Date
         pageId: date
+      - id: color.yaml
+        type: MenuLink
+        properties:
+          icon: AlertOutlined
+          title: Color
+        pageId: color  
 
 pages:
+  - _ref: color.yaml
   - _ref: date.yaml
   - _ref: new-ticket.yaml
     properties:

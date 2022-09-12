@@ -29,15 +29,29 @@ menus:
         type: MenuLink
         properties:
           icon: AlertOutlined
-          title: New ticket
+          title: Formulário
         pageId: new-ticket
 
 pages:
   - _ref: new-ticket.yaml
+    properties:
+      title: Welcome
+      logo:
+        src: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg
+        style:
+          width: 80px;
+          margin: 10px 15px;
+          height: 60px;
   - id: Welcome
     type: PageHeaderMenu
     properties:
       title: Welcome
+      logo:
+        src: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg
+        style:
+          width: 80px;
+          margin: 10px 15px;
+          height: 60px;
     areas:
       content:
         justify: center
@@ -52,7 +66,6 @@ pages:
                 properties:
                     
                   subTitle: We are excited to see what you are going to build
-                              chuva
                   icon:
                     name: HeartTwoTone
                     color: '#f00'

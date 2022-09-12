@@ -1,4 +1,4 @@
-id: date
+id: new-ticket
 type: PageHeaderMenu
 
 requests:
@@ -34,7 +34,7 @@ blocks:
       - id: page_heading
         type: Title
         properties:
-          content:  # Change the title on the page.
+          content: # Change the title on the page.
           level: 3 # Make the title a little smaller (an html `<h3>`).
       - id: Nome
         required: true
@@ -135,7 +135,7 @@ blocks:
               value: 3
               disabled: false
               filterString: null
-              style: null        
+              style: null
       - id: Número de exames
         type: NumberInput
         properties:
@@ -169,7 +169,7 @@ blocks:
             colon: false # Hide the label colon
           options:
             - Yes
-            - No 
+            - No
       - id: block_id
         type: S3UploadButton
         properties:
@@ -186,7 +186,7 @@ blocks:
           strong: true
           title: Ler contrato
       - id: Termos_e_Contrato
-        type: CheckboxSwitch 
+        type: CheckboxSwitch
         properties:
           description: Concordo com os termos de serviço
           label:

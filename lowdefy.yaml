@@ -23,19 +23,19 @@ menus:
       - id: new-ticket
         type: MenuLink
         properties:
-          icon: AlertOutlined
+          icon: UnorderedListOutlined
           title: Formulário
         pageId: new-ticket
       - id: date.yaml
         type: MenuLink
         properties:
-          icon: AlertOutlined
-          title: Date
+          icon: CalendarFilled
+          title: Datas
         pageId: date
       - id: color
         type: MenuLink
         properties:
-          icon: CodepenSquareFilled
+          icon: BgColorsOutlined
           title: Cores
         pageId: color  
       - id: context-blocks.yaml
@@ -74,12 +74,10 @@ menus:
           icon: AlertOutlined
           title: Alertas e Animações
         pageId: alertas 
-
-
       - id: datatable.yaml
         type: MenuLink
         properties:
-          icon: AlertOutlined
+          icon: TableOutlined
           title: Tabelas
         pageId: datatable 
 pages:

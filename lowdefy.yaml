@@ -39,19 +39,19 @@ menus:
         type: MenuLink
         properties:
           icon: CodepenSquareFilled
-          title: Color
+          title: Cores
         pageId: color  
       - id: text
         type: MenuLink
         properties:
           icon: FontSizeOutlined
-          title: TextInput
+          title: Texto
         pageId: text
       - id: estatisticas.yaml
         type: MenuLink
         properties:
           icon: LineChartOutlined
-          title: Estatisticas
+          title: Estatísticas
         pageId: estatisticas 
       - id: menus.yaml
         type: MenuLink

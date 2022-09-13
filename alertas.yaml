@@ -80,4 +80,54 @@ blocks:
         properties:
           button:
             icon: AlibabaOutlined
+      - id: legenda3
+        type: Title
+        properties:
+          content: 'Badge:'
+          level: 4 
+      - id: block_id
+        type: Badge
+        properties:
+          count: '23'
+          offset: []
+        blocks:
+          - id: password_input
+            type: PasswordInput
+            properties:
+              placeholder: password
+              title: Password Input
+      - id: legenda3
+        type: Title
+        properties:
+          content: 'Tooltip:'
+          level: 4 
+      - id: Tooltip
+        type: Tooltip
+        properties:
+          title: Tooltip title
+        blocks:
+          - id: password_input
+            type: PasswordInput
+            properties:
+              placeholder: password
+              title: Password Input
+      - id: legenda5
+        type: Title
+        properties:
+          content: 'Result:'
+          level: 4 
+      - id: Result
+        type: Result
+        properties:
+          title: error!
+      - id: legenda5
+        type: Title
+        properties:
+          content: '500 Error:'
+          level: 4 
+      - id: error_example
+        type: Result
+        properties:
+          status: 500
+          title: An error occurred
       

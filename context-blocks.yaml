@@ -1,0 +1,112 @@
+id: context-blocks
+type: PageSiderMenu
+
+
+requests:
+  - id: save_data
+    type: GoogleSheetAppendOne
+    connectionId: google_sheet
+    properties:
+      row:
+        # Get all the values to save from state
+        ticket_title:
+          _state: ticket_title
+        ticket_type:
+          _state: ticket_type
+        ticket_description:
+          _state: ticket_description
+        confirm_restart:
+          _state: confirm_restart
+        # Add the date the row was created using the `_date.now` operator.
+        created_date:
+          _date: now
+
+properties:
+  title: Context Blocks # The title in the browser tab.
+  logo:
+        src: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg
+        style:
+          width: 80px;
+          margin: 10px 15px;
+          height: 60px;
+  breadcrumb:
+    list: []
+  menus:
+    - id: default
+      links:
+        - id: welcome
+          type: MenuLink
+          properties:
+            icon: HomeOutlined
+            title: Home
+          pageId: Welcome
+        - id: new-ticket
+          type: MenuLink
+          properties:
+            icon: AlertOutlined
+            title: Formulário
+          pageId: new-ticket
+        - id: date.yaml
+          type: MenuLink
+          properties:
+            icon: AlertOutlined
+            title: Date
+          pageId: date
+        - id: color.yaml
+          type: MenuLink
+          properties:
+            icon: CodepenSquareFilled
+            title: Color
+          pageId: color  
+        - id: context-blocks.yaml
+          type: MenuLink
+          properties:
+            icon: CodepenSquareFilled
+            title: Context Blocks
+          pageId: context-blocks
+
+layout:
+  contentJustify: center # Center the contents of the page.
+blocks:
+  - id: content_card
+    type: Card
+    layout:
+      size: 800 # Set the size of the card so it does not fill the full screen.
+      contentGutter: 16 # Make a 16px gap between all blocks in this card.
+    blocks:
+      - id: page_heading
+        type: Title
+        properties:
+          content: Orientação do conteúdo # Change the title on the page.
+          level: 3 # Make the title a little smaller (an html `<h3>`).
+
+      - id: block_id_1
+        type: Img
+        properties:
+          src: https://i.postimg.cc/v83LCTj7/l1.png
+
+      - id: block_id_2
+        type: Img
+        properties:
+          src: https://i.postimg.cc/Fszgvm5M/l2.png
+
+      - id: block_id_3
+        type: Img
+        properties:
+          src: https://i.postimg.cc/xTZGT79c/l3.png
+
+      - id: block_id_4
+        type: Img
+        properties:
+          src: https://i.postimg.cc/LstjD8L1/l4.png
+
+      - id: block_id_5
+        type: Img
+        properties:
+          src: https://i.postimg.cc/rpXS5r0T/l5.png
+
+      - id: block_id_6
+        type: Img
+        properties:
+          src: https://i.postimg.cc/Sxz6XrKV/l6.png
+      

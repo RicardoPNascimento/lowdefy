@@ -43,11 +43,25 @@ menus:
           icon: CodepenSquareFilled
           title: Color
         pageId: color  
+      - id: context-blocks.yaml
+        type: MenuLink
+        properties:
+          icon: CodepenSquareFilled
+          title: Context Blocks
+        pageId: context-blocks 
+      - id: list-blocks.yaml
+        type: MenuLink
+        properties:
+          icon: CodepenSquareFilled
+          title: List Blocks
+        pageId: list-blocks 
 
 pages:
   - _ref: color.yaml
   - _ref: date.yaml
   - _ref: new-ticket.yaml
+  - _ref: context-blocks.yaml
+  - _ref: list-blocks.yaml
     properties:
       title: Welcome
       logo:

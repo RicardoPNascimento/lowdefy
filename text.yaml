@@ -1,6 +1,14 @@
 id: text
 type: PageHeaderMenu
 
+events:
+  onInit:
+      - id: single_value
+        type: SetState
+        params:
+          paragraph_input: TEST
+          title_input: TEST2
+
 requests:
   - id: save_data
     type: GoogleSheetAppendOne
@@ -62,14 +70,39 @@ blocks:
       - id: paragraph_input
         type: ParagraphInput
         properties:
-          paragraph_input: "Click edit to change the paragraph content."
           title: Paragraph Input
+          content: Alo
       - id: text_area
         type: TextArea
         properties:
-          autoSize: true
+          placeholder: >-
+            Text
+            Area                                                                           
+          rows: 2
           title: Text Area
+        blocks:
+          - id: test
+            type: ParagraphInput
       - id: text_input
         type: TextInput
         properties:
+          placeholder: Text Input
+          suffixIcon: FontSizeOutlined
           title: Text Input
+      - id: number_input
+        type: NumberInput
+        properties:
+          autoFocus: true
+          placeholder: 'Ex: 22'
+          title: Number Input
+      - id: password_input
+        type: PasswordInput
+        properties:
+          placeholder: password
+          title: Password Input
+      - id: block_id
+        type: Title
+        properties:
+          content: A title block.
+      - id: title_input
+        type: TitleInput

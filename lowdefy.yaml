@@ -63,23 +63,30 @@ menus:
           title: Estatísticas
         pageId: estatisticas 
       - id: menus.yaml
-        type: MenuLink
+        type: MenuGroup
         properties:
           icon: MenuOutlined
-          title: Menus
-        pageId: menus 
-      - id: alertas.yaml
-        type: MenuLink
-        properties:
-          icon: AlertOutlined
-          title: Alertas e Animações
-        pageId: alertas 
-      - id: datatable.yaml
-        type: MenuLink
-        properties:
-          icon: TableOutlined
-          title: Tabelas
-        pageId: datatable 
+          title: Mais
+        links:
+          - id: page175
+            type: MenuLink
+            pageId: menus
+            properties:
+              icon: MenuUnfoldOutlined
+              title: Menus
+          - id: page174
+            type: MenuLink
+            pageId: alertas
+            properties:
+              icon: AlertOutlined
+              title: Alertas e Animações
+          - id: page17
+            type: MenuLink
+            pageId: datatable
+            properties:
+              icon: TableOutlined
+              title: Tabelas
+          
 pages:
 
   - _ref: alertas.yaml

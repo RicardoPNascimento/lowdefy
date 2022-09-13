@@ -58,7 +58,7 @@ blocks:
           placeholder:
             - Start Date
             - End Date
-        title: DateRangeSelector
+          title: DateRangeSelector
 
       - id: DateSelector
         type: DateSelector
@@ -93,7 +93,7 @@ blocks:
       - id: WeekSelector
         type: WeekSelector
         properties:
-        disabledDates:
-          dates: []
-          ranges: []
-        format: wo-YYYY
+          disabledDates:
+            dates: []
+            ranges: []
+          format: wo-YYYY

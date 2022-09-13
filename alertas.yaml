@@ -2,6 +2,7 @@ id: alertas
 type: PageHeaderMenu
 
 
+
 properties:
 
   logo:
@@ -10,6 +11,7 @@ properties:
           width: 80px;
           margin: 10px 15px;
           height: 60px;   
+
 layout:
   contentJustify: center # Center the contents of the page.
 
@@ -45,7 +47,6 @@ blocks:
           level: 4  
       - id: MsgAlert
         type: Button
-        properties:
         events:
           onClick:
           - id: open

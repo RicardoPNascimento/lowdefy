@@ -212,3 +212,15 @@ blocks:
               disabled: true
               title: Panel 3
               extraKey: null
+      - id: legenda3
+        type: Title
+        properties:
+          content: 'List:'
+          level: 4 
+      - id: todos
+        type: ControlledList
+        blocks:
+          - id: todos.$
+            type: TitleInput
+            properties:
+              level: 4

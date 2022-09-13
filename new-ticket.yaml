@@ -22,27 +22,20 @@ requests:
 
 properties:
   title: Formulário # The title in the browser tab.
-links:
-      - id: page1
-        type: MenuLink
-        pageId: page1
-        properties:
-          title: Page 1
-          danger: false
-        style: null
-      - id: more_pages
-        type: MenuGroup
-        links:
-          - id: page3
-            type: MenuLink
-            pageId: page3
-        pageId: null
-        properties:
-          danger: false
-          title: null
-        style: null 
 layout:
   contentJustify: center # Center the contents of the page.
+# links:
+#   - id: page1
+#     type: MenuLink
+#     params:
+#       pageId: page1
+#   # - id: more_pages
+#   #   type: MenuGroup
+#   # - id: page3
+#   #   type: MenuLink
+#   #   pageId: page3
+    
+
 blocks:
   - id: content_card
     type: Card

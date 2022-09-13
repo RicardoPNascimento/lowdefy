@@ -36,11 +36,22 @@ blocks:
         properties:
           content:  # Change the title on the page.
           level: 3 # Make the title a little smaller (an html `<h3>`).
+      - id: legenda3
+        type: Title
+        properties:
+          content: 'AutoComplete:'
+          level: 4
       - id: auto_complete
         type: AutoComplete
         properties:
           autoFocus: true
           title: Auto Complete Input
+          options:
+          - sunny
+          - rain
+          - storm
+          - sun
+          - rainy
       - id: paragraph_input
         type: ParagraphInput
         properties:

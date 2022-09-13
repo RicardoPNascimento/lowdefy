@@ -80,30 +80,67 @@ blocks:
           content: Orientação do conteúdo # Change the title on the page.
           level: 3 # Make the title a little smaller (an html `<h3>`).
 
+      - id: block_id
+        type: Title
+        properties:
+          content: PageHCF
+
       - id: block_id_1
         type: Img
         properties:
-          src: https://i.postimg.cc/v83LCTj7/l1.png
+          src: https://i.postimg.cc/v83LCTj7/l1.png   
+
+
+      - id: title 2
+        type: Title
+        properties:
+          content: PageHCSF   
 
       - id: block_id_2
         type: Img
         properties:
           src: https://i.postimg.cc/Fszgvm5M/l2.png
 
+      - id: title 3
+        type: Title
+        properties:
+          content: PageHeaderMenu   
+    
       - id: block_id_3
         type: Img
         properties:
           src: https://i.postimg.cc/xTZGT79c/l3.png
+
+
+      - id: title 4
+        type: Title
+        properties:
+          content: PageHSCF
 
       - id: block_id_4
         type: Img
         properties:
           src: https://i.postimg.cc/LstjD8L1/l4.png
 
+
+      - id: title 5
+        type: Title
+        properties:
+          content: PageSHCF  
+
+
       - id: block_id_5
         type: Img
         properties:
           src: https://i.postimg.cc/rpXS5r0T/l5.png
+
+
+
+      - id: title 6
+        type: Title
+        properties:
+          content: PageSiderMenu
+     
 
       - id: block_id_6
         type: Img

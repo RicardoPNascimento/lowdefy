@@ -1,6 +1,13 @@
 id: datatable
 type: PageHeaderMenu
 properties:
+
+  logo:
+        src: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg
+        style:
+          width: 80px;
+          margin: 10px 15px;
+          height: 60px; 
   title: 
   
   prefetchPages:
@@ -99,5 +106,6 @@ blocks:
         type: Card
     id: max_width_box
     layout: 
-      size: 500
+      size: 600
+      height: 100
     type: Box

@@ -44,12 +44,12 @@ menus:
           icon: CodepenSquareFilled
           title: Context Blocks
         pageId: context-blocks 
-      # - id: list-blocks.yaml
-      #   type: MenuLink
-      #   properties:
-      #     icon: CodepenSquareFilled
-      #     title: List Blocks
-      #   pageId: list-blocks 
+      - id: list-blocks.yaml
+        type: MenuLink
+        properties:
+          icon: CodepenSquareFilled
+          title: List Blocks
+        pageId: list-blocks 
       - id: text
         type: MenuLink
         properties:
@@ -91,7 +91,7 @@ pages:
   - _ref: date.yaml
   - _ref: new-ticket.yaml
   - _ref: context-blocks.yaml
-  # - _ref: list-blocks.yaml
+  - _ref: list-blocks.yaml
   - _ref: text.yaml
   - _ref: datatable.yaml
 

@@ -14,8 +14,6 @@ connections:
       sheetIndex: 0
       spreadsheetId: 1d5r1hEnqHG0d2PBXMTrvFhFnrXrxo_OQBg0X1VEsbFk
       write: true
-
-
 menus:
   - id: default
     links:
@@ -37,11 +35,11 @@ menus:
           icon: AlertOutlined
           title: Date
         pageId: date
-      - id: color.yaml
+      - id: color
         type: MenuLink
         properties:
           icon: CodepenSquareFilled
-          title: Color
+          title: Cores
         pageId: color  
       - id: context-blocks.yaml
         type: MenuLink
@@ -55,13 +53,40 @@ menus:
           icon: CodepenSquareFilled
           title: List Blocks
         pageId: list-blocks 
-
+      - id: text
+        type: MenuLink
+        properties:
+          icon: FontSizeOutlined
+          title: Texto
+        pageId: text
+      - id: estatisticas.yaml
+        type: MenuLink
+        properties:
+          icon: LineChartOutlined
+          title: Estatísticas
+        pageId: estatisticas 
+      - id: menus.yaml
+        type: MenuLink
+        properties:
+          icon: MenuOutlined
+          title: Menus
+        pageId: menus 
+      - id: alertas.yaml
+        type: MenuLink
+        properties:
+          icon: AlertOutlined
+          title: Alertas e Animações
+        pageId: alertas 
 pages:
+  - _ref: alertas.yaml
+  - _ref: menus.yaml
+  - _ref: estatisticas.yaml
   - _ref: color.yaml
   - _ref: date.yaml
   - _ref: new-ticket.yaml
   - _ref: context-blocks.yaml
   - _ref: list-blocks.yaml
+  - _ref: text.yaml
     properties:
       title: Welcome
       logo:
@@ -113,15 +138,14 @@ pages:
                               params:
                                 url: https://docs.lowdefy.com
                                 newTab: true
-  
       footer:
-        blocks:
-          - id: footer
-            type: Paragraph
-            properties:
-              type: secondary
-              content: |
-                Made by a Lowdefy 🤖
+            blocks:
+              - id: footer
+                type: Paragraph
+                properties:
+                  type: secondary
+                  content: |
+                    Made by a Lowdefy 🤖
   
   
 

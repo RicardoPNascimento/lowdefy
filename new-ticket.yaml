@@ -22,6 +22,25 @@ requests:
 
 properties:
   title: Formulário # The title in the browser tab.
+links:
+      - id: page1
+        type: MenuLink
+        pageId: page1
+        properties:
+          title: Page 1
+          danger: false
+        style: null
+      - id: more_pages
+        type: MenuGroup
+        links:
+          - id: page3
+            type: MenuLink
+            pageId: page3
+        pageId: null
+        properties:
+          danger: false
+          title: null
+        style: null 
 layout:
   contentJustify: center # Center the contents of the page.
 blocks:
@@ -31,21 +50,22 @@ blocks:
       size: 800 # Set the size of the card so it does not fill the full screen.
       contentGutter: 16 # Make a 16px gap between all blocks in this card.
     blocks:
+      - id: block_id
+        type: Avatar
+        properties:
+          title: 
+          src: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg
       - id: page_heading
         type: Title
         properties:
-          content: # Change the title on the page.
+          content:  # Change the title on the page.
           level: 3 # Make the title a little smaller (an html `<h3>`).
       - id: Nome
         required: true
         type: TextInput
         properties:
-          title: Nome
-      - id: cpf
-        type: TextInput
-        required: true
-        properties:
-          title: Cpf
+          title: TextInput
+          placeholder: Nome
       - id: email
         type: TextInput
         required: true
@@ -61,11 +81,13 @@ blocks:
             pass:
               _regex: '^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
         properties:
-          title: Email
+          title: TextInput
+          placeholder: email
       - id: Horários
         type: DateRangeSelector
         required: true
         properties:
+          title: DateRangeSelector
           disabledDates:
             dates: []
             ranges: []
@@ -75,7 +97,7 @@ blocks:
       - id: block_id
         type: RadioSelector
         properties:
-          title: Primeiro atendimento ?
+          title: 'RadioSelector'
           options:
             - label: Sim
               value: 1
@@ -89,7 +111,7 @@ blocks:
         required: true
         type: ButtonSelector
         properties:
-          title: Tipo de atendimento
+          title: ButtonSelector
           options: # Set the allowed options
             - Emergência
             - Ambulatório
@@ -98,28 +120,38 @@ blocks:
         type: Selector
         properties:
           placeholder: Número de exames
-          title: Tipo de atendimento
+          title: Selector
           options:
-            - label: Emergência
-              value: 1
-              disabled: false
-              filterString: null
-              style: null
-            - label: Ambulatório
-              value: 2
-              disabled: false
-              filterString: null
-              style: null
-            - label: Triagem
-              value: 3
-              disabled: false
-              filterString: null
-              style: null
+            - Emergência
+            - Ambulatório
+            - Triagem
+      - id: confirm_restart
+        type: ButtonSelector
+        visible: # Test if block should be visible to the user
+          _eq: # Equals operator
+            - _state: ticket_type # Get the ticket_type value from state.
+            - Emergência
+        validate:
+          # Show a warning that shows before validate is called
+          # and does not block Validate action.
+          - status: warning
+            message: If you did not restart your device, we will ask you to restart it.
+            pass:
+              _eq:
+                - _state: confirm_restart
+                - Yes
+        properties:
+          title: 'Dependency:'
+          label:
+            colon: false # Hide the label colon
+          options:
+            - Yes
+            - No 
       - id: selecioneT
         type: MultipleSelector
         properties:
           placeholder: Número de exames
-          title: Selecione doenças preexistente
+          title: MultipleSelector
           options:
             - label: Anamnese inicial
               value: 1
@@ -135,47 +167,28 @@ blocks:
               value: 3
               disabled: false
               filterString: null
-              style: null
-      - id: Número de exames
+              style: null        
+      - id: Número_exames
         type: NumberInput
         properties:
           placeholder: Número de exames
+          title: NumberInput
       - id: block_id
         type: Alert
         properties:
           message: Alerts help to highlight important information
+          title: Alert
       - id: ticket_description
         type: TextArea
         properties:
-          title: Descrição
-      - id: confirm_restart
-        type: ButtonSelector
-        visible: # Test if block should be visible to the user
-          _eq: # Equals operator
-            - _state: ticket_type # Get the ticket_type value from state.
-            - Bug report
-        validate:
-          # Show a warning that shows before validate is called
-          # and does not block Validate action.
-          - status: warning
-            message: If you did not restart your device, we will ask you to restart it.
-            pass:
-              _eq:
-                - _state: confirm_restart
-                - Yes
-        properties:
-          title: Did you restart your device?
-          label:
-            colon: false # Hide the label colon
-          options:
-            - Yes
-            - No
+          title: TextArea
+      
       - id: block_id
         type: S3UploadButton
         properties:
           button:
             icon: UserSwitchOutlined
-            title: Anexe sua foto
+            title: S3UploadButton
       - id: block_id
         type: Anchor
         properties:
@@ -184,11 +197,18 @@ blocks:
           href: https://simbiose.readme.io/password?redirect=/
           newTab: true
           strong: true
-          title: Ler contrato
-      - id: Termos_e_Contrato
-        type: CheckboxSwitch
+          title: Anchor
+      - id: atualizacoes
+        type: Switch
+        layout:
+          offset: 10
         properties:
-          description: Concordo com os termos de serviço
+          label:
+            title: Switch
+      - id: Termos_e_Contrato
+        type: CheckboxSwitch 
+        properties:
+          description: CheckboxSwitch
           label:
             disabled: true
       - id: block_id
@@ -196,7 +216,7 @@ blocks:
         style:
           align-content: right
         properties:
-          html: <a href="https://simbiose.readme.io/">Lowdefy Website</a>
+          html: <a href="https://simbiose.readme.io/">DangerousHtml</a>
       - id: reset_button
         type: Button
         layout:
@@ -228,3 +248,4 @@ blocks:
               params: save_data
             - id: reset # Reset the form once data has been submitted
               type: Reset
+            

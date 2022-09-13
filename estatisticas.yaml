@@ -1,0 +1,82 @@
+id: estatisticas
+type: PageHeaderMenu
+
+properties:
+  title: Formulário # The title in the browser tab.
+layout:
+  contentJustify: center # Center the contents of the page.
+blocks:
+  - id: content_card
+    type: Card
+    layout:
+      size: 800 # Set the size of the card so it does not fill the full screen.
+      contentGutter: 16 # Make a 16px gap between all blocks in this card.
+    blocks:
+      - id: block_id
+        type: Breadcrumb
+        properties:
+          list:
+            - First
+            - Second
+      - id: block_id
+        type: Title
+        properties:
+          content: 'Frenquência dos clientes:'
+          level: 4
+      # - id: block_id
+      #   type: Avatar
+      #   properties:
+      #     src: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg
+      - id: block_id
+        type: EChart
+        properties:
+          option:
+            xAxis:
+              type: category
+              data:
+                - Mon
+                - Tue
+                - Wed
+                - Thu
+                - Fri
+                - Sat
+                - Sun
+            yAxis:
+              type: value
+            series:
+              - type: bar
+                data:
+                  - 150
+                  - 230
+                  - 224
+                  - 218
+                  - 135
+                  - 147
+                  - 260
+      - id: legenda1
+        type: Title
+        properties:
+          content: 'Taxa de retorno:'
+          level: 4
+      - id: block_id
+        type: Progress
+        properties:
+          percent: 30
+      - id: legenda1
+        type: Title
+        properties:
+          content: 'Índice de satisfação:'
+          level: 4    
+      - id: circle_example
+        type: Progress
+        properties:
+          type: circle
+          percent: 60
+          strokeColor: '#52c41a'
+      - id: SatisfacaoChecker
+        type: RatingSlider
+        properties:
+          autoFocus: true
+          color: '#13c2c2'
+          label:
+            title: 'Nível de satisfação'

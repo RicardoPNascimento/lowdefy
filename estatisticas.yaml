@@ -3,6 +3,13 @@ type: PageHeaderMenu
 
 properties:
   title: Formulário # The title in the browser tab.
+  logo:
+        src: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg
+        style:
+          width: 80px;
+          margin: 10px 15px;
+          height: 60px; 
+
 layout:
   contentJustify: center # Center the contents of the page.
 blocks:

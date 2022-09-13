@@ -100,9 +100,27 @@ blocks:
         properties:
           placeholder: password
           title: Password Input
-      - id: block_id
+      - id: block_id1
         type: Title
         properties:
           content: A title block.
+      - id: legenda5
+        type: Title
+        properties:
+          content: 'TitleInput:'
+          level: 4 
       - id: title_input
         type: TitleInput
+      - id: legenda5
+        type: Title
+        properties:
+          content: 'Comment:'
+          level: 4 
+      - id: block_id
+        type: Comment
+        properties:
+          author: Simbiose Ventures
+          avatar: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg
+          content: Developers
+          datetime: 13/09/2022
+      

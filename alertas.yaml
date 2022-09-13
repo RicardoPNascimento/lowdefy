@@ -3,8 +3,18 @@ type: PageHeaderMenu
 
 
 
+properties:
+
+  logo:
+        src: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg
+        style:
+          width: 80px;
+          margin: 10px 15px;
+          height: 60px;   
+
 layout:
   contentJustify: center # Center the contents of the page.
+
 blocks:
   - id: content_card
     type: Card

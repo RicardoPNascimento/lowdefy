@@ -1,0 +1,74 @@
+id: alertas
+type: PageHeaderMenu
+
+
+properties:
+layout:
+  contentJustify: center # Center the contents of the page.
+blocks:
+  - id: content_card
+    type: Card
+    layout:
+      size: 800 # Set the size of the card so it does not fill the full screen.
+      contentGutter: 16 # Make a 16px gap between all blocks in this card.
+    blocks:
+      - id: legenda1
+        type: Title
+        properties:
+          content: 'Spin:'
+          level: 4  
+      - id: block_id
+        type: Spin
+        properties:
+          tip: olá
+      - id: legenda2
+        type: Title
+        properties:
+          content: 'Alert:'
+          level: 4  
+      - id: block_id
+        type: Alert
+        properties:
+          message: Alertas ajudam a destacar informações importantes.
+      - id: legenda2
+        type: Title
+        properties:
+          content: 'Messages:'
+          level: 4  
+      - id: MsgAlert
+        type: Button
+        properties:
+        events:
+          onClick:
+          - id: open
+            type: CallMethod
+            params:
+              blockId: block_id09
+              method: open
+      - id: block_id09
+        type: Message
+        properties:
+          content: ok
+          duration: 1
+      - id: legenda2
+        type: Title
+        properties:
+          content: 'Notification:'
+          level: 4 
+      - id: NotifiAlert
+        type: Button
+        properties:
+          title: TextInput
+        events:
+          onClick:
+          - id: open
+            type: CallMethod
+            params:
+              blockId: notification
+              method: open
+      - id: notification
+        type: Notification
+        properties:
+          button:
+            icon: AlibabaOutlined
+      

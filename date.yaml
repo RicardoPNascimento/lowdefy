@@ -21,7 +21,7 @@ requests:
           _date: now
 
 properties:
-  title: Date # The title in the browser tab.
+  title: Datas # The title in the browser tab.
 
   logo:
         src: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg

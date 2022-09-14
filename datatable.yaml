@@ -5,9 +5,9 @@ properties:
   logo:
         src: https://i.postimg.cc/Qtn1P5zW/simbiose-Logo.png
         style:
-          width: 80px;
+          width: 10px;
           margin: 10px 15px;
-          height: 60px; 
+          height: 100px; 
   title: Tabelas
   
   prefetchPages:

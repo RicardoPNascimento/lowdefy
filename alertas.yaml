@@ -4,6 +4,7 @@ type: PageHeaderMenu
 
 
 properties:
+  title: Alertas e Animações
 
   logo:
         src: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg

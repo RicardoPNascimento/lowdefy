@@ -8,7 +8,7 @@ properties:
           width: 80px;
           margin: 10px 15px;
           height: 60px; 
-  title: 
+  title: Tabelas
   
   prefetchPages:
     - cadastro-funcionario

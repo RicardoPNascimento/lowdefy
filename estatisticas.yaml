@@ -2,7 +2,7 @@ id: estatisticas
 type: PageHeaderMenu
 
 properties:
-  title: Formulário # The title in the browser tab.
+  title: Estatísticas # The title in the browser tab.
   logo:
         src: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg
         style:

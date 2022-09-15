@@ -1,10 +1,7 @@
-id: context-blocks
-type: PageHeaderMenu
-
-
-
+id: template-1
+type: PageSiderMenu
 properties:
-  title: Context Blocks # The title in the browser tab.
+  title: Outro Template
   logo:
         src: https://i.postimg.cc/Qtn1P5zW/simbiose-Logo.png
         style:
@@ -13,39 +10,75 @@ properties:
           height: 100px;
   breadcrumb:
     list: []
-  menus:
+  menu:
     - id: default
       links:
-        - id: welcome
-          type: MenuLink
-          properties:
-            icon: HomeOutlined
-            title: Home
-          pageId: Welcome
         - id: new-ticket
           type: MenuLink
           properties:
-            icon: AlertOutlined
+            icon: UnorderedListOutlined
             title: Formulário
           pageId: new-ticket
         - id: date.yaml
           type: MenuLink
           properties:
-            icon: AlertOutlined
-            title: Date
+            icon: CalendarFilled
+            title: Datas
           pageId: date
-        - id: color.yaml
+        - id: color
+          type: MenuLink
+          properties:
+            icon: BgColorsOutlined
+            title: Cores
+          pageId: color   
+        - id: list-blocks.yaml
           type: MenuLink
           properties:
             icon: CodepenSquareFilled
-            title: Color
-          pageId: color  
-        - id: context-blocks.yaml
+            title: List Blocks
+          pageId: list-blocks 
+        - id: text
           type: MenuLink
           properties:
-            icon: CodepenSquareFilled
-            title: Context Blocks
-          pageId: context-blocks
+            icon: FontSizeOutlined
+            title: Texto
+          pageId: text
+        - id: estatisticas.yaml
+          type: MenuLink
+          properties:
+            icon: LineChartOutlined
+            title: Estatísticas
+          pageId: estatisticas 
+        - id: menus.yaml
+          type: MenuGroup
+          properties:
+            icon: MenuOutlined
+            title: Mais
+          links:
+            - id: page175
+              type: MenuLink
+              pageId: menus
+              properties:
+                icon: MenuUnfoldOutlined
+                title: Menus
+            - id: page174
+              type: MenuLink
+              pageId: alertas
+              properties:
+                icon: AlertOutlined
+                title: Alertas e Animações
+            - id: page17
+              type: MenuLink
+              pageId: datatable
+              properties:
+                icon: TableOutlined
+                title: Tabelas
+            - id: page18
+              type: MenuLink
+              pageId: template-1
+              properties:
+                icon: DiffOutlined
+                title: Outro Template
 
 layout:
   contentJustify: center # Center the contents of the page.

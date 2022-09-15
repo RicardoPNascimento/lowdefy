@@ -37,13 +37,7 @@ menus:
         properties:
           icon: BgColorsOutlined
           title: Cores
-        pageId: color  
-      - id: context-blocks.yaml
-        type: MenuLink
-        properties:
-          icon: CodepenSquareFilled
-          title: Context Blocks
-        pageId: context-blocks 
+        pageId: color   
       - id: list-blocks.yaml
         type: MenuLink
         properties:
@@ -86,6 +80,12 @@ menus:
             properties:
               icon: TableOutlined
               title: Tabelas
+          - id: page18
+            type: MenuLink
+            pageId: template-1
+            properties:
+              icon: DiffOutlined
+              title: Outro Template
           
 pages:
 
@@ -95,11 +95,10 @@ pages:
   - _ref: color.yaml
   - _ref: date.yaml
   - _ref: new-ticket.yaml
-  - _ref: context-blocks.yaml
   - _ref: list-blocks.yaml
   - _ref: text.yaml
   - _ref: datatable.yaml
-
+  - _ref: template.yaml
   
 
   

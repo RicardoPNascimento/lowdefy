@@ -250,4 +250,12 @@ blocks:
               params: save_data
             - id: reset # Reset the form once data has been submitted
               type: Reset
-            
+              
+  - id: block_id
+    type: Html
+    properties:
+      html: > 
+        <div style="margin: auto; height: 100px;  background: #6b7d8c;">
+          <p style="padding-top: 40px; margin-top: 20px; font-size: 1.2em; text-align: center; color: white;">Desenvolvido por equipe &copy;<b>Simbiose Ventures</b></p>
+        </div>
+   

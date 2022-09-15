@@ -248,3 +248,11 @@ blocks:
             - '#F78DA7'
             - '#9900EF'
           title: Twitter Color Selector
+  
+  - id: block_id
+    type: Html
+    properties:
+      html: > 
+        <div style="margin: auto; height: 100px;  background: #6b7d8c;">
+          <p style="padding-top: 40px; margin-top: 20px; font-size: 1.2em; text-align: center; color: white;">Desenvolvido por equipe &copy;<b>Simbiose Ventures</b></p>
+        </div>

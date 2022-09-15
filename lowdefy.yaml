@@ -86,7 +86,7 @@ menus:
             properties:
               icon: TableOutlined
               title: Tabelas
-          
+
 pages:
 
   - _ref: alertas.yaml

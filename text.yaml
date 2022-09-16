@@ -1,6 +1,5 @@
 id: text
 type: PageHeaderMenu
-
 events:
   onInit:
       - id: single_value
@@ -8,14 +7,12 @@ events:
         params:
           paragraph_input: TEST
           title_input: TEST2
-
 requests:
   - id: save_data
     type: GoogleSheetAppendOne
     connectionId: google_sheet
     properties:
       row:
-        # Get all the values to save from state
         ticket_title:
           _state: ticket_title
         ticket_type:
@@ -24,13 +21,10 @@ requests:
           _state: ticket_description
         confirm_restart:
           _state: confirm_restart
-        # Add the date the row was created using the `_date.now` operator.
         created_date:
           _date: now
-
 properties:
-  title: Texto # The title in the browser tab.
-
+  title: Texto 
   logo:
         src: https://i.postimg.cc/Qtn1P5zW/simbiose-Logo.png
         style:
@@ -38,89 +32,128 @@ properties:
           margin: 10px 15px;
           height: 100px;   
 layout:
-  contentJustify: center # Center the contents of the page.
-blocks:
-  - id: content_card
-    type: Card
-    layout:
-      size: 800 # Set the size of the card so it does not fill the full screen.
-      contentGutter: 16 # Make a 16px gap between all blocks in this card.
+  contentJustify: center
+  contentGutter: 16
+areas:
+  content:
     blocks:
-      - id: page_heading
-        type: Title
+      - id: AutoCompleteCard
+        type: Card
         properties:
-          content:  # Change the title on the page.
-          level: 3 # Make the title a little smaller (an html `<h3>`).
-      - id: legenda3
-        type: Title
-        properties:
-          content: 'AutoComplete:'
-          level: 4
-      - id: auto_complete
-        type: AutoComplete
-        properties:
-          autoFocus: true
-          title: Auto Complete Input
-          options:
-          - sunny
-          - rain
-          - storm
-          - sun
-          - rainy
-      - id: paragraph_input
-        type: ParagraphInput
-        properties:
-          title: Paragraph Input
-          content: Alo
-      - id: text_area
-        type: TextArea
-        properties:
-          placeholder: >-
-            Text
-            Area                                                                           
-          rows: 2
-          title: Text Area
+          title: AutoComplete
+        layout:
+          span: 16 
         blocks:
+        - id: AutoCompleteBlock
+          type: AutoComplete
+          properties:
+            autoFocus: true
+            title: Auto Complete Input
+            options:
+            - sunny
+            - rain
+            - storm
+            - sun
+            - rainy
+      - id: ParagraphInputCard
+        type: Card
+        properties:
+          title: ParagraphInput
+        layout:
+          span: 16 
+        blocks:
+        - id: ParagraphInputBlock
+          type: ParagraphInput
+          properties:
+            title: Paragraph Input
+            content: Alo
+      - id: TextAreaCard
+        type: Card
+        properties:
+          title: TextArea
+        layout:
+          span: 16 
+        blocks:
+        - id: TextAreaBlock
+          type: TextArea
+          properties:
+            placeholder: >-
+              Text
+              Area                                                                           
+            rows: 2
+            title: Text Area
+          blocks:
           - id: test
             type: ParagraphInput
-      - id: text_input
-        type: TextInput
+      - id: TextInputCard
+        type: Card
         properties:
-          placeholder: Text Input
-          suffixIcon: FontSizeOutlined
-          title: Text Input
-      - id: number_input
-        type: NumberInput
+          title: TextInput
+        layout:
+          span: 16 
+        blocks:
+        - id: TextInputBLock
+          type: TextInput
+          properties:
+            placeholder: Text Input
+            suffixIcon: FontSizeOutlined
+            title: Text Input
+      - id: NumberInputCard
+        type: Card
         properties:
-          autoFocus: true
-          placeholder: 'Ex: 22'
-          title: Number Input
-      - id: password_input
-        type: PasswordInput
+          title: NumberInput
+        layout:
+          span: 16 
+        blocks:
+        - id: NumberInputBlock
+          type: NumberInput
+          properties:
+            autoFocus: true
+            placeholder: 'Ex: 22'
+            title: Number Input
+      - id: PasswordInputCard
+        type: Card
         properties:
-          placeholder: password
-          title: Password Input
-      - id: block_id1
-        type: Title
+          title: PasswordInput
+        layout:
+          span: 16 
+        blocks:
+        - id: PasswordInputBlock
+          type: PasswordInput
+          properties:
+            placeholder: password
+            title: Password Input
+      - id: TitleCard
+        type: Card
         properties:
-          content: A title block.
-      - id: legenda5
-        type: Title
+          title: Title
+        layout:
+          span: 16 
+        blocks:
+        - id: TitleBLock
+          type: Title
+          properties:
+            content: A title block.
+      - id: TitleInputCard
+        type: Card
         properties:
-          content: 'TitleInput:'
-          level: 4 
-      - id: title_input
-        type: TitleInput
-      - id: legenda5
-        type: Title
+          title: TitleInput
+        layout:
+          span: 16 
+        blocks:
+        - id: TitleInputBlock
+          type: TitleInput
+      - id: CommentCard
+        type: Card
         properties:
-          content: 'Comment:'
-          level: 4 
-      - id: block_id
-        type: Comment
-        properties:
-          author: Simbiose Ventures
-          avatar: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg
-          content: Developers
-          datetime: 13/09/2022
-      
+          title: Comment
+        layout:
+          span: 16 
+        blocks:
+        - id: CommentBlock
+          type: Comment
+          properties:
+            author: Simbiose Ventures
+            avatar: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg
+            content: Developers
+            datetime: 13/09/2022

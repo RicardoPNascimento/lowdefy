@@ -1,134 +1,204 @@
 id: alertas
 type: PageHeaderMenu
-
-
-
 properties:
   title: Alertas e Animações
-
   logo:
         src: https://i.postimg.cc/Qtn1P5zW/simbiose-Logo.png
         style:
           width: 30px;
           margin: 10px 15px;
           height: 100px;   
-
 layout:
-  contentJustify: center # Center the contents of the page.
-
-blocks:
-  - id: content_card
-    type: Card
-    layout:
-      size: 800 # Set the size of the card so it does not fill the full screen.
-      contentGutter: 16 # Make a 16px gap between all blocks in this card.
+  contentJustify: center
+  contentGutter: 16
+areas:
+  content:
     blocks:
-      - id: legenda1
-        type: Title
+      - id: SpinCard
+        type: Card
         properties:
-          content: 'Spin:'
-          level: 4  
-      - id: block_id
-        type: Spin
-        properties:
-          tip: olá
-      - id: legenda2
-        type: Title
-        properties:
-          content: 'Alert:'
-          level: 4  
-      - id: block_id
-        type: Alert
-        properties:
-          message: Alertas ajudam a destacar informações importantes.
-      - id: legenda2
-        type: Title
-        properties:
-          content: 'Messages:'
-          level: 4  
-      - id: MsgAlert
-        type: Button
-        events:
-          onClick:
-          - id: open
-            type: CallMethod
-            params:
-              blockId: block_id09
-              method: open
-      - id: block_id09
-        type: Message
-        properties:
-          content: ok
-          duration: 1
-      - id: legenda2
-        type: Title
-        properties:
-          content: 'Notification:'
-          level: 4 
-      - id: NotifiAlert
-        type: Button
-        properties:
-          title: TextInput
-        events:
-          onClick:
-          - id: open
-            type: CallMethod
-            params:
-              blockId: notification
-              method: open
-      - id: notification
-        type: Notification
-        properties:
-          button:
-            icon: AlibabaOutlined
-      - id: legenda3
-        type: Title
-        properties:
-          content: 'Badge:'
-          level: 4 
-      - id: block_id
-        type: Badge
-        properties:
-          count: '23'
-          offset: []
-        blocks:
-          - id: password_input
-            type: PasswordInput
+          title: Spin
+        layout:
+          span: 16 
+        blocks:  
+          - id: blockSpin
+            type: Spin
             properties:
-              placeholder: password
-              title: Password Input
-      - id: legenda3
-        type: Title
+              tip: olá , mundo !
+      - id: AlertCard
+        type: Card
         properties:
-          content: 'Tooltip:'
-          level: 4 
-      - id: Tooltip
-        type: Tooltip
+          title: Alert
+        layout:
+          span: 16 
+        blocks: 
+        - id: blockAlert
+          type: Alert
+          properties:
+            message: Alertas ajudam a destacar informações importantes. 
+      - id: MessageCard
+        type: Card
         properties:
-          title: Tooltip title
+          title: Message
+        layout:
+          span: 16
+        blocks: 
+        - id: blockMessage
+          properties:
+            title: Ok !
+          type: Button
+          layout:
+            span: 6
+          events:
+            onClick:
+            - id: open1
+              type: CallMethod
+              params:
+                blockId: block_id1
+                method: open
+        - id: MsgAlert1
+          type: Button
+          properties:
+            title: Phone
+          layout:
+            span: 6
+          events:
+            onClick:
+            - id: open2
+              type: CallMethod
+              params:
+                blockId: block_id2
+                method: open
+        - id: MsgAlert2
+          type: Button
+          properties:
+            title: Timer
+          layout:
+            span: 6
+          events:
+            onClick:
+            - id: open3
+              type: CallMethod
+              params:
+                blockId: block_id3
+                method: open
+        - id: MsgAlert3
+          properties:
+            title: Folder
+          type: Button
+          layout:
+            span: 6
+          events:
+            onClick:
+            - id: open4
+              type: CallMethod
+              params:
+                blockId: block_id4
+                method: open
+        - id: block_id1
+          type: Message
+          properties:
+            content: ok
+            duration: 1
+        - id: block_id2
+          type: Message
+          properties:
+            content: ok
+            duration: 1
+            icon: PhoneFilled
+        - id: block_id3
+          type: Message
+          properties:
+            content: ok
+            duration: 1
+            icon: HourglassOutlined
+        - id: block_id4
+          type: Message
+          properties:
+            content: folder
+            duration: 1
+            icon: FolderOpenOutlined
+      - id: NotificationCard
+        type: Card
+        properties:
+          title: Notification
+        layout:
+          span: 16
         blocks:
-          - id: password_input
-            type: PasswordInput
+          - id: NotificationAlert
+            type: Button
             properties:
-              placeholder: password
-              title: Password Input
-      - id: legenda5
-        type: Title
+              title: TextInput
+            events:
+              onClick:
+              - id: NotificationEvent
+                type: CallMethod
+                params:
+                  blockId: notification
+                  method: open
+          - id: notification
+            type: Notification
+            properties:
+              button:
+                icon: AlibabaOutlined
+      - id: BadgeCard
+        type: Card
         properties:
-          content: 'Result:'
-          level: 4 
-      - id: Result
-        type: Result
+          title: Badge
+        layout:
+          span: 16
+        blocks:
+          - id: BadgeCard1
+            type: Badge
+            properties:
+              count: '23'
+              offset: []
+            blocks:
+              - id: password_inputBadge
+                type: PasswordInput
+                properties:
+                  placeholder: password
+                  title: Password Input
+      - id: TooltipCard
+        type: Card
         properties:
-          title: error!
-      - id: legenda5
-        type: Title
+          title: Tooltip
+        layout:
+          span: 16
+        blocks:
+          - id: Tooltip
+            type: Tooltip
+            properties:
+              title: Tooltip title
+            blocks:
+              - id: password_input
+                type: PasswordInput
+                properties:
+                  placeholder: password
+                  title: Password Input
+      - id: ResultCard
+        type: Card
         properties:
-          content: '500 Error:'
-          level: 4 
-      - id: error_example
-        type: Result
+          title: Result
+        layout:
+          span: 16
+        blocks:
+          - id: Result
+            type: Result
+            properties:
+              title: error! 
+      - id: ResultCardError
+        type: Card
         properties:
+          title: Result 500
+        layout:
+          span: 16
+        blocks:
+          - id: error_example
+            type: Result
+            properties:
+              status: 500
+              title: An error occurred
           status: 500
           title: An error occurred
 
@@ -139,3 +209,4 @@ blocks:
         <div style="width: 74%; margin: auto; height: 100px;  background: #6b7d8c;">
           <p style="margin-top: 20px; padding-top: 40px; font-size: 1.2em; text-align: center; color: white;">Desenvolvido por equipe &copy;<b>Simbiose Ventures</b></p>
         </div>        
+

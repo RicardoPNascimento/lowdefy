@@ -199,7 +199,6 @@ areas:
             properties:
               status: 500
               title: An error occurred
-
       - id: block_id
         type: Html
         properties:

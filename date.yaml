@@ -1,21 +1,5 @@
 id: date
 type: PageHeaderMenu
-requests:
-  - id: save_data
-    type: GoogleSheetAppendOne
-    connectionId: google_sheet
-    properties:
-      row:
-        ticket_title:
-          _state: ticket_title
-        ticket_type:
-          _state: ticket_type
-        ticket_description:
-          _state: ticket_description
-        confirm_restart:
-          _state: confirm_restart
-        created_date:
-          _date: now
 properties:
   title: Datas 
   logo:

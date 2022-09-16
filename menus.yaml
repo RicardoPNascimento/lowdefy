@@ -12,215 +12,223 @@ properties:
           height: 100px;   
 layout:
   contentJustify: center # Center the contents of the page.
-blocks:
-  - id: content_card
-    type: Card
-    layout:
-      size: 800 # Set the size of the card so it does not fill the full screen.
-      contentGutter: 16 # Make a 16px gap between all blocks in this card.
+  contentGutter: 16
+  size: 500
+  
+
+areas:
+  content:
     blocks:
-      - id: legenda1
-        type: Title
+      - id: genre_counts_bar_chart_card
+        type: Card
         properties:
-          content: 'Menu:'
-          level: 4 
-      - id: block_id
-        type: Menu
-        properties:
-          selectedKeys: []
-          defaultOpenKeys: []
-          links:
-            - id: home
-              type: MenuLink
-              pageId: home
-              properties:
-                icon: HomeOutlined
-                title: Home
-                danger: false
-              links: []
-              style: null
-            - id: pages
-              type: MenuGroup
-              properties:
-                title: Pages
-                icon: LayoutOutlined
-                danger: false
-              links:
-                - id: page1
-                  type: MenuLink
-                  pageId: page1
-                  properties:
-                    title: Page 1
-                    danger: false
-                  style: null
-                - id: more_pages
-                  type: MenuGroup
-                  links:
-                    - id: page3
-                      type: MenuLink
-                      pageId: page3
-                  pageId: null
-                  properties:
-                    danger: false
-                    title: null
-                  style: null
-              pageId: null
-              style: null
-      - id: legenda1
-        type: Title
-        properties:
-          content: 'Mobile menu:'
-          level: 4 
-      - id: block_id
-        type: MobileMenu
-        properties:
-          selectedKeys: []
-          links:
-            - id: home
-              type: MenuLink
-              pageId: home
-              properties:
-                icon: HomeOutlined
-                title: Home
-                danger: false
-              links: []
-              style: null
-            - id: pages
-              type: MenuGroup
-              properties:
-                title: Pages
-                icon: LayoutOutlined
-                danger: false
-              links:
-                - id: page1
-                  type: MenuLink
-                  pageId: page1
-                  properties:
-                    title: Page 1
-                    danger: false
-                  style: null
-                - id: more_pages
-                  type: MenuGroup
-                  links:
-                    - id: page3
-                      type: MenuLink
-                      pageId: page3
-                  pageId: null
-                  properties:
-                    danger: false
-                    title: null
-                  style: null
-              pageId: null
-              style: null
-      - id: legenda1
-        type: Title
-        properties:
-          content: 'ConfirmModal:'
-          level: 4 
-      - id: NewModalConfirm
-        type: Button
-        events:
-          onClick:
-          - id: open
-            type: CallMethod
-            params:
-              blockId: block_id66
-              method: open
-      - id: block_id66
-        type: ConfirmModal
-        properties:
-          centered: true
-          content: Modal de confirmação
-      - id: legenda2
-        type: Title
-        properties:
-          content: 'Modal:'
-          level: 4 
-      - id: NewModal
-        type: Button
-        events:
-          onClick:
-          - id: toggleOpen
-            type: CallMethod
-            params:
-              blockId: block_id1
-              method: toggleOpen
-      - id: block_id1
-        type: Modal
-        properties:
-          centered: true
-      - id: legenda2
-        type: Title
-        properties:
-          content: 'Drawer:'
-          level: 4 
-      - id: Drawer1
-        type: Button
-        events:
-          onClick:
-          - id: setOpen
-            type: CallMethod
-            params:
-              blockId: block_id3
-              method: setOpen
-              args:
-                - open: true
-      - id: block_id3
-        type: Drawer
-        properties:
-          title: Drawer
-      - id: legenda2
-        type: Title
-        properties:
-          content: 'Tabs:'
-          level: 4 
-      - id: block_id4
-        type: Tabs
-        properties:
-          tabs:
-            - key: tab1
-              title: Tab 1
-              icon: MenuOutlined
-              disabled: false
-            - key: tab2
-              title: Tab 2
-              disabled: false
-              icon: AccountBookFilled
-            - key: tab3
-              disabled: false
-              title: Tab 3
-              icon: AlertTwoTone
-          extraAreaKey: extra
-      - id: legenda3
-        type: Title
-        properties:
-          content: 'Collapse:'
-          level: 4 
-      - id: block_id
-        type: Collapse
-        properties:
-          panels:
-            - key: panel1
-              extraKey: panel1Extra
-              title: Panel 1
-              disabled: false
-            - key: panel2
-              title: Panel 2
-              disabled: false
-              extraKey: null
-            - key: panel3
-              disabled: true
-              title: Panel 3
-              extraKey: null
-      - id: legenda3
-        type: Title
-        properties:
-          content: 'List:'
-          level: 4 
-      - id: todos
-        type: ControlledList
+          title: 
+        layout:
+          span: 16 
         blocks:
-          - id: todos.$
-            type: TitleInput
+          - id: legenda1
+            type: Title
             properties:
-              level: 4
+              content: 'Menu:'
+              level: 4 
+          - id: block_id
+            type: Menu
+            properties:
+              selectedKeys: []
+              defaultOpenKeys: []
+              links:
+                - id: home
+                  type: MenuLink
+                  pageId: home
+                  properties:
+                    icon: HomeOutlined
+                    title: Home
+                    danger: false
+                  links: []
+                  style: null
+                - id: pages
+                  type: MenuGroup
+                  properties:
+                    title: Pages
+                    icon: LayoutOutlined
+                    danger: false
+                  links:
+                    - id: page1
+                      type: MenuLink
+                      pageId: page1
+                      properties:
+                        title: Page 1
+                        danger: false
+                      style: null
+                    - id: more_pages
+                      type: MenuGroup
+                      links:
+                        - id: page3
+                          type: MenuLink
+                          pageId: page3
+                      pageId: null
+                      properties:
+                        danger: false
+                        title: null
+                      style: null
+                  pageId: null
+                  style: null
+
+
+      - id: genre_counts_bar_chart_card2
+        type: Card
+        properties:
+          title: 
+        layout:
+          span: 16 
+        blocks:
+          - id: legenda1
+            type: Title
+            properties:
+              content: 'Mobile menu:'
+              level: 4 
+          - id: block_id
+            type: MobileMenu
+            properties:
+              selectedKeys: []
+              links:
+                - id: home
+                  type: MenuLink
+                  pageId: home
+                  properties:
+                    icon: HomeOutlined
+                    title: Home
+                    danger: false
+                  links: []
+                  style: null
+                - id: pages
+                  type: MenuGroup
+                  properties:
+                    title: Pages
+                    icon: LayoutOutlined
+                    danger: false
+                  links:
+                    - id: page1
+                      type: MenuLink
+                      pageId: page1
+                      properties:
+                        title: Page 1
+                        danger: false
+                      style: null
+                    - id: more_pages
+                      type: MenuGroup
+                      links:
+                        - id: page3
+                          type: MenuLink
+                          pageId: page3
+                      pageId: null
+                      properties:
+                        danger: false
+                        title: null
+                      style: null
+                  pageId: null
+                  style: null
+
+         
+      - id: genre_counts_bar_chart_card2
+        type: Card
+        properties:
+          title: 
+        layout:
+          span: 16 
+        blocks:
+
+
+          - id: legenda1
+            type: Title
+            properties:
+              content: 'ConfirmModal:'
+              level: 4 
+
+
+          - id: NewModalConfirm
+            type: Button
+            events:
+              onClick:
+              - id: open
+                type: CallMethod
+                params:
+                  blockId: block_id66
+                  method: open        
+          - id: block_id66
+            type: ConfirmModal
+            properties:
+              centered: true
+              content: Modal de confirmação
+
+      - id: genre_counts_bar_chart_card2
+        type: Card
+        properties:
+          title:
+        layout:
+          span: 16 
+        blocks:
+        - id: legenda2
+          type: Title
+          properties:
+            content: 'Tabs:'
+            level: 4 
+        - id: block_id4
+          type: Tabs
+          properties:
+            tabs:
+              - key: tab1
+                title: Tab 1
+                icon: MenuOutlined
+                disabled: false
+              - key: tab2
+                title: Tab 2
+                disabled: false
+                icon: AccountBookFilled
+              - key: tab3
+                disabled: false
+                title: Tab 3
+                icon: AlertTwoTone
+            extraAreaKey: extra 
+
+      - id: genre_counts_bar_chart_card5
+        type: Card
+        properties:
+            title:
+        layout:
+          span: 16 
+        blocks:
+            - id: legenda3
+              type: Title
+              properties:
+                content: 'Collapse:'
+                level: 4 
+            - id: block_id
+              type: Collapse
+              properties:
+                panels:
+                  - key: panel1
+                    extraKey: panel1Extra
+                    title: Panel 1
+                    disabled: false
+                  - key: panel2
+                    title: Panel 2
+                    disabled: false
+                    extraKey: null
+                  - key: panel3
+                    disabled: false
+                    title: Panel 3
+                    extraKey: null
+            - id: legenda3
+              type: Title
+              properties:
+                content: 'List:'
+                level: 4 
+            - id: todos
+              type: ControlledList
+              blocks:
+                - id: todos.$
+                  type: TitleInput
+                  properties:
+                    level: 4      
+          

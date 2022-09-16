@@ -12,78 +12,116 @@ properties:
 
 layout:
   contentJustify: center # Center the contents of the page.
-blocks:
-  - id: content_card
-    type: Card
-    layout:
-      size: 800 # Set the size of the card so it does not fill the full screen.
-      contentGutter: 16 # Make a 16px gap between all blocks in this card.
+  contentGutter: 16
+  size: 500
+  
+areas:
+  content:
     blocks:
-      - id: block_id
-        type: Breadcrumb
+      - id: genre_counts_bar_chart_card
+        type: Card
         properties:
-          list:
-            - First
-            - Second
-      - id: block_id
-        type: Title
+          title: Frenquência dos clientes
+        layout:
+      
+          span: 16 
+        blocks:
+          - id: block_id
+            type: Breadcrumb
+            properties:
+              list:
+                - First
+                - Second
+
+          - id: block_id
+            type: Title
+            properties:
+              content: 
+              level: 4      
+
+          - id: block_id
+            type: Avatar
+            properties:
+              src: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg    
+      - id: genre_counts_bar_chart_card2
+        type: Card
         properties:
-          content: 'Frenquência dos clientes:'
-          level: 4
-      # - id: block_id
-      #   type: Avatar
-      #   properties:
-      #     src: https://i.postimg.cc/FHMcrxYJ/1580782652276.jpg
-      - id: block_id
-        type: EChart
+          title:
+        layout:
+         
+          span: 16 
+        blocks:
+          - id: block_id
+            type: EChart
+            properties:
+              option:
+                xAxis:
+                  type: category
+                  data:
+                    - Mon
+                    - Tue
+                    - Wed
+                    - Thu
+                    - Fri
+                    - Sat
+                    - Sun
+                yAxis:
+                  type: value
+                series:
+                  - type: bar
+                    data:
+                      - 150
+                      - 230
+                      - 224
+                      - 218
+                      - 135
+                      - 147
+                      - 260
+
+          - id: legenda1
+            type: Title
+            properties:
+              content: 'Taxa de retorno:'
+              level: 4
+
+
+          - id: block_id
+            type: Progress
+            properties:
+              percent: 30    
+
+          
+
+      - id: genre_counts_bar_chart_card3
+        type: Card
         properties:
-          option:
-            xAxis:
-              type: category
-              data:
-                - Mon
-                - Tue
-                - Wed
-                - Thu
-                - Fri
-                - Sat
-                - Sun
-            yAxis:
-              type: value
-            series:
-              - type: bar
-                data:
-                  - 150
-                  - 230
-                  - 224
-                  - 218
-                  - 135
-                  - 147
-                  - 260
-      - id: legenda1
-        type: Title
-        properties:
-          content: 'Taxa de retorno:'
-          level: 4
-      - id: block_id
-        type: Progress
-        properties:
-          percent: 30
-      - id: legenda1
-        type: Title
-        properties:
-          content: 'Índice de satisfação:'
-          level: 4    
-      - id: circle_example
-        type: Progress
-        properties:
-          type: circle
-          percent: 60
-          strokeColor: '#52c41a'
-      - id: SatisfacaoChecker
-        type: RatingSlider
-        properties:
-          autoFocus: true
-          color: '#13c2c2'
-          label:
-            title: 'Nível de satisfação'
+          title: 
+        layout:
+         
+          span: 16 
+        blocks:
+
+            - id: legenda1
+              type: Title
+              properties:
+                content: 'Índice de satisfação:'
+                level: 4          
+
+
+            - id: circle_example
+              type: Progress
+              properties:
+                type: circle
+                percent: 60
+                strokeColor: '#52c41a'
+            - id: SatisfacaoChecker
+              type: RatingSlider
+              properties:
+                autoFocus: true
+                color: '#13c2c2'
+                label:
+                  title: 'Nível de satisfação' 
+
+
+            
+          

@@ -1,13 +1,11 @@
-id: new-ticket
+id: formulario
 type: PageHeaderMenu
-
 requests:
   - id: save_data
     type: GoogleSheetAppendOne
     connectionId: google_sheet
     properties:
       row:
-        # Get all the values to save from state
         ticket_title:
           _state: ticket_title
         ticket_type:
@@ -16,41 +14,24 @@ requests:
           _state: ticket_description
         confirm_restart:
           _state: confirm_restart
-        # Add the date the row was created using the `_date.now` operator.
         created_date:
           _date: now
-
 properties:
-  title: Formulário # The title in the browser tab.
-
-
+  title: Formulário
   logo:
         src: https://i.postimg.cc/Qtn1P5zW/simbiose-Logo.png
         style:
           width: 10px;
           margin: 10px 15px;
           height: 100px;   
-
 layout:
-  contentJustify: center # Center the contents of the page.
-# links:
-#   - id: page1
-#     type: MenuLink
-#     params:
-#       pageId: page1
-#   # - id: more_pages
-#   #   type: MenuGroup
-#   # - id: page3
-#   #   type: MenuLink
-#   #   pageId: page3
-    
-
+  contentJustify: center 
 blocks:
   - id: content_card
     type: Card
     layout:
-      size: 800 # Set the size of the card so it does not fill the full screen.
-      contentGutter: 16 # Make a 16px gap between all blocks in this card.
+      size: 800
+      contentGutter: 16
     blocks:
       - id: block_id
         type: Avatar
@@ -60,8 +41,8 @@ blocks:
       - id: page_heading
         type: Title
         properties:
-          content:  # Change the title on the page.
-          level: 3 # Make the title a little smaller (an html `<h3>`).
+          content:
+          level: 3
       - id: Nome
         required: true
         type: TextInput
@@ -114,7 +95,7 @@ blocks:
         type: ButtonSelector
         properties:
           title: ButtonSelector
-          options: # Set the allowed options
+          options:
             - Emergência
             - Ambulatório
             - Triagem
@@ -129,13 +110,11 @@ blocks:
             - Triagem
       - id: confirm_restart
         type: ButtonSelector
-        visible: # Test if block should be visible to the user
-          _eq: # Equals operator
-            - _state: ticket_type # Get the ticket_type value from state.
+        visible: 
+          _eq: 
+            - _state: ticket_type 
             - Emergência
         validate:
-          # Show a warning that shows before validate is called
-          # and does not block Validate action.
           - status: warning
             message: If you did not restart your device, we will ask you to restart it.
             pass:
@@ -145,7 +124,7 @@ blocks:
         properties:
           title: 'Dependency:'
           label:
-            colon: false # Hide the label colon
+            colon: false 
           options:
             - Yes
             - No 
@@ -222,11 +201,11 @@ blocks:
       - id: reset_button
         type: Button
         layout:
-          span: 12 # Set the size of the button (span 12 of 24 columns)
+          span: 12
         properties:
           title: Reset
-          block: true # Make the button fill all the space available to it
-          type: default # Make the button a plain button
+          block: true 
+          type: default 
           icon: ClearOutlined
         events:
           onClick:
@@ -239,15 +218,15 @@ blocks:
         properties:
           title: Submit
           block: true
-          type: primary # Make the button a primary button with color
+          type: primary 
           icon: SaveOutlined
         events:
           onClick:
             - id: validate
               type: Validate
-            - id: save_data # Make a request to Google Sheets
+            - id: save_data
               type: Request
               params: save_data
-            - id: reset # Reset the form once data has been submitted
+            - id: reset
               type: Reset
             

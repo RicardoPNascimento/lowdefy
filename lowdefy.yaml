@@ -4,7 +4,6 @@ name: Lowdefy starter
 types:
   AgGridAlpine:
     url: https://blocks-cdn.lowdefy.com/v3.12.3/blocks-aggrid/meta/AgGridAlpine.json
-
 connections:
   - id: google_sheet
     type: GoogleSheet
@@ -20,43 +19,43 @@ connections:
 menus:
   - id: default
     links:
-      - id: new-ticket
+      - id: formulario
         type: MenuLink
         properties:
           icon: UnorderedListOutlined
           title: Formulário
-        pageId: new-ticket
-      - id: date.yaml
+        pageId: formulario
+      - id: datas
         type: MenuLink
         properties:
           icon: CalendarFilled
           title: Datas
-        pageId: date
-      - id: color
+        pageId: datas
+      - id: cores
         type: MenuLink
         properties:
           icon: BgColorsOutlined
           title: Cores
-        pageId: color   
-      - id: list-blocks.yaml
+        pageId: cores   
+      - id: list-blocks
         type: MenuLink
         properties:
           icon: CodepenSquareFilled
           title: List Blocks
         pageId: list-blocks 
-      - id: text
+      - id: textos
         type: MenuLink
         properties:
           icon: FontSizeOutlined
-          title: Texto
-        pageId: text
-      - id: estatisticas.yaml
+          title: Textos
+        pageId: textos
+      - id: estatisticas
         type: MenuLink
         properties:
           icon: LineChartOutlined
           title: Estatísticas
         pageId: estatisticas 
-      - id: menus.yaml
+      - id: menus
         type: MenuGroup
         properties:
           icon: MenuOutlined
@@ -86,24 +85,14 @@ menus:
             properties:
               icon: DiffOutlined
               title: Outro Template
-          
 pages:
-
   - _ref: alertas.yaml
   - _ref: menus.yaml
   - _ref: estatisticas.yaml
-  - _ref: color.yaml
-  - _ref: date.yaml
-  - _ref: new-ticket.yaml
+  - _ref: cores.yaml
+  - _ref: datas.yaml
+  - _ref: formulario.yaml
   - _ref: list-blocks.yaml
-  - _ref: text.yaml
+  - _ref: textos.yaml
   - _ref: datatable.yaml
   - _ref: template.yaml
-  
-
-  
-   
-  
-  
-  
-

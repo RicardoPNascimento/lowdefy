@@ -1,4 +1,4 @@
-id: text
+id: textos
 type: PageHeaderMenu
 events:
   onInit:

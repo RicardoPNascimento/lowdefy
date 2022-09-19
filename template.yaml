@@ -10,181 +10,90 @@ properties:
           height: 100px;
   breadcrumb:
     list: []
-  menu:
-    - id: default
-      links:
-        - id: new-ticket
-          type: MenuLink
-          properties:
-            icon: UnorderedListOutlined
-            title: Formulário
-          pageId: new-ticket
-        - id: date.yaml
-          type: MenuLink
-          properties:
-            icon: CalendarFilled
-            title: Datas
-          pageId: date
-        - id: color
-          type: MenuLink
-          properties:
-            icon: BgColorsOutlined
-            title: Cores
-          pageId: color   
-        - id: list-blocks.yaml
-          type: MenuLink
-          properties:
-            icon: CodepenSquareFilled
-            title: List Blocks
-          pageId: list-blocks 
-        - id: text
-          type: MenuLink
-          properties:
-            icon: FontSizeOutlined
-            title: Texto
-          pageId: text
-        - id: estatisticas.yaml
-          type: MenuLink
-          properties:
-            icon: LineChartOutlined
-            title: Estatísticas
-          pageId: estatisticas 
-        - id: menus.yaml
-          type: MenuGroup
-          properties:
-            icon: MenuOutlined
-            title: Mais
-          links:
-            - id: page175
-              type: MenuLink
-              pageId: menus
-              properties:
-                icon: MenuUnfoldOutlined
-                title: Menus
-            - id: page174
-              type: MenuLink
-              pageId: alertas
-              properties:
-                icon: AlertOutlined
-                title: Alertas e Animações
-            - id: page17
-              type: MenuLink
-              pageId: datatable
-              properties:
-                icon: TableOutlined
-                title: Tabelas
-            - id: page18
-              type: MenuLink
-              pageId: template-1
-              properties:
-                icon: DiffOutlined
-                title: Outro Template
-
 layout:
-  contentJustify: center # Center the contents of the page.
+  contentJustify: center 
 blocks:
   - id: content_card
     type: Card
     layout:
-      size: 800 # Set the size of the card so it does not fill the full screen.
-      contentGutter: 16 # Make a 16px gap between all blocks in this card.
+      size: 800
+      contentGutter: 16 
     blocks:
       - id: page_heading
         type: Title
         properties:
-          content: Orientação do conteúdo # Change the title on the page.
-          level: 3 # Make the title a little smaller (an html `<h3>`).
-
-      - id: block_id
+          content: Orientação do conteúdo 
+          level: 3
+      - id: PageHCFtitle
         type: Title
         layout:
           offset: 4
-          
         properties:
           content: PageHCF
-
-      - id: block_id_1
+      - id: PageHCFimg
         type: Img
         layout:
           offset: 4
         properties:
           src: https://i.postimg.cc/v83LCTj7/l1.png   
-
-
-      - id: title 2
+      - id: PageHCSFtitle
         type: Title
         layout:
           offset: 4
         properties:
           content: PageHCSF   
-
-      - id: block_id_2
+      - id: PageHCSFimg
         type: Img
         layout:
           offset: 4
         properties:
           src: https://i.postimg.cc/Fszgvm5M/l2.png
-
-      - id: title 3
+      - id: PageHeaderMenuTitle
         type: Title
         layout:
           offset: 4
         properties:
           content: PageHeaderMenu   
-    
-      - id: block_id_3
+      - id: PageHeaderMenuImg
         type: Img
         layout:
           offset: 4
         properties:
           src: https://i.postimg.cc/xTZGT79c/l3.png
-
-
-      - id: title 4
+      - id: PageHSCFtitle
         type: Title
         layout:
           offset: 4
         properties:
           content: PageHSCF
-
-      - id: block_id_4
+      - id: PageHSCFimg
         type: Img
         layout:
           offset: 4
         properties:
           src: https://i.postimg.cc/LstjD8L1/l4.png
-
-
-      - id: title 5
+      - id: PageSHCFtitle
         type: Title
         layout:
           offset: 4
         properties:
           content: PageSHCF  
-
-
-      - id: block_id_5
+      - id: PageSHCFimg
         type: Img
         layout:
           offset: 4
         properties:
           src: https://i.postimg.cc/rpXS5r0T/l5.png
-
-
-
-      - id: title 6
+      - id: PageSiderMenuTitle
         type: Title
         layout:
           offset: 4
         properties:
           content: PageSiderMenu
-     
-
-      - id: block_id_6
+      - id: PageSiderMenuImg
         type: Img
         layout:
           offset: 4
           padding-top: 5px
         properties:
           src: https://i.postimg.cc/Sxz6XrKV/l6.png
-      

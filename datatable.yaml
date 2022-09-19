@@ -1,7 +1,6 @@
 id: datatable
 type: PageHeaderMenu
 properties:
-
   logo:
         src: https://i.postimg.cc/Qtn1P5zW/simbiose-Logo.png
         style:
@@ -9,52 +8,21 @@ properties:
           margin: 10px 15px;
           height: 100px; 
   title: Tabelas
-  
   prefetchPages:
     - cadastro-funcionario
-    
 layout:
   contentJustify: center
-
-
-
-# events:
-#   onEnterAsync:
-   
-#     - id: user
-#       type: Request
-#       params: get_users
-
-
-# requests:
-#   - id: get_users
-#     type: KnexBuilder
-#     connectionId:  mysql
-#     properties:
-#       tableName: user
-#       query:
-#         - select:
-#           - "*"
-#         - from:
-#           - user    
-           
-
-
 blocks: 
-  - 
-    blocks: 
-      - 
-        id: title
+  - blocks: 
+      - id: title
         layout: 
           flex: "1 1 auto"
         properties: 
           content: exemplo de tabela
         type: Title
-      - 
-        events: 
+      - events: 
           onClick: 
-            - 
-              id: link_to_cadastro-funcionario
+            - id: link_to_cadastro-funcionario
               params: cadastro-funcionario
               type: Link
         id: new_user_button
@@ -64,13 +32,10 @@ blocks:
           icon: PlusOutlined
           title: "New User"
         type: Button
-      - 
-        blocks: 
-          - 
-            events: 
+      - blocks: 
+          - events: 
               onRowClick: 
-                - 
-                  id: link_to_editar-perfil
+                - id: link_to_editar-perfil
                   params: 
                     input: 
                       user_id: 
@@ -79,7 +44,6 @@ blocks:
                   type: Link
             id: users_table
             properties: 
-              
               rowData:
                 - a: zero
                   b: 000
@@ -94,13 +58,6 @@ blocks:
                 - field: 'a'
                 - field: 'b'
                 - field: 'c'
-
-
-              # defaultColDef: 
-              #   filter: true
-              #   resizable: true
-              #   sortable: true
-              
             type: AgGridAlpine
         id: content_card
         type: Card

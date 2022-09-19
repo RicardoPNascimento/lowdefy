@@ -1,11 +1,7 @@
 id: list-blocks
 type: PageHeaderMenu
-
-
-
 properties:
-  title: List Blocks # The title in the browser tab.
-
+  title: List Blocks
   logo:
         src: https://i.postimg.cc/Qtn1P5zW/simbiose-Logo.png
         style:
@@ -13,66 +9,85 @@ properties:
           margin: 10px 15px;
           height: 100px; 
 layout:
-  contentJustify: center # Center the contents of the page.
-blocks:
-  - id: content_card
-    type: Card
-    layout:
-      size: 800 # Set the size of the card so it does not fill the full screen.
-      contentGutter: 16 # Make a 16px gap between all blocks in this card.
-    blocks:
-        - id: todo_input
-          type: TextInput
-          layout:
-            grow: 1
-          properties:
-            label:
-              disabled: true
-            placeholder: Write something todo...
-        - id: add_item
-          type: Button
-          layout:
-            shrink: 1
-          properties:
-            title: Add item
-            icon: PlusOutlined
-          events:
-            onClick:
-              - id: add
-                type: SetState
-                params:
-                  todos:
-                    _array.concat:
-                      - - _state: todo_input
-                      - _state: todos
-                  todo_input: null
-        - id: todos
-          type: List
-          layout:
-            contentGutter: 16
-          blocks:
-            - id: todos.$
-              type: TitleInput
+  contentJustify: center
+  contentGutter: 16
+  size: 500
+areas:
+  content:
+        blocks:
+          - id: ListCard
+            type: Card
+            properties:
+              title: List
+            layout:
+              span: 16
+            blocks:
+            - id: todo_input
+              type: TextInput
               layout:
                 grow: 1
               properties:
-                level: 4
-            - id: remove_item
-              type: Icon
+                label:
+                  disabled: true
+                placeholder: Write something todo...
+            - id: add_item
+              type: Button
               layout:
                 shrink: 1
               properties:
-                name: MinusCircleOutlined
-                size: 18
+                title: Add item
+                icon: PlusOutlined
               events:
                 onClick:
-                  - id: remove
-                    type: CallMethod
-                    messages:
-                      loading: sd f sdfgsdfg
-                      success: hi sdfg sdfgs g
+                  - id: add
+                    type: SetState
                     params:
-                      blockId: todos
-                      method: removeItem
-                      args:
-                        - _index: 0
+                      todos:
+                        _array.concat:
+                          - - _state: todo_input
+                          - _state: todos
+                      todo_input: null
+            - id: todos
+              type: List
+              layout:
+                contentGutter: 16
+              blocks:
+                - id: todos.$
+                  type: TitleInput
+                  layout:
+                    grow: 1
+                  properties:
+                    level: 4
+                - id: remove_item
+                  type: Icon
+                  layout:
+                    shrink: 1
+                  properties:
+                    name: MinusCircleOutlined
+                    size: 18
+                  events:
+                    onClick:
+                      - id: remove
+                        type: CallMethod
+                        messages:
+                          loading: Removendo ...
+                          success: Removido !
+                        params:
+                          blockId: todos
+                          method: removeItem
+                          args:
+                            - _index: 0
+          - id: ControlledListCard
+            type: Card
+            properties:
+              title: ControlledList
+            layout:
+              span: 16
+            blocks:
+            - id: ControlledListBlock
+              type: ControlledList
+              blocks:
+                - id: todos.$
+                  type: TitleInput
+                  properties:
+                    level: 4    

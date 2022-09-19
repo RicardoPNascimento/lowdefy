@@ -141,7 +141,7 @@ areas:
               - id: open
                 type: CallMethod
                 params:
-                  blockId: block_id66
+                  blockId: ConfirmModalBlock
                   method: open        
           - id: ConfirmModalBlock
             type: ConfirmModal

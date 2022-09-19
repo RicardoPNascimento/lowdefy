@@ -1,0 +1,190 @@
+id: context-blocks
+type: PageHeaderMenu
+
+
+
+properties:
+  title: Context Blocks # The title in the browser tab.
+  logo:
+        src: https://i.postimg.cc/Qtn1P5zW/simbiose-Logo.png
+        style:
+          width: 10px;
+          margin: 10px 15px;
+          height: 100px;
+  breadcrumb:
+    list: []
+  menus:
+    - id: default
+      links:
+        - id: welcome
+          type: MenuLink
+          properties:
+            icon: HomeOutlined
+            title: Home
+          pageId: Welcome
+        - id: new-ticket
+          type: MenuLink
+          properties:
+            icon: AlertOutlined
+            title: Formulário
+          pageId: new-ticket
+        - id: date.yaml
+          type: MenuLink
+          properties:
+            icon: AlertOutlined
+            title: Date
+          pageId: date
+        - id: color.yaml
+          type: MenuLink
+          properties:
+            icon: CodepenSquareFilled
+            title: Color
+          pageId: color  
+        - id: context-blocks.yaml
+          type: MenuLink
+          properties:
+            icon: CodepenSquareFilled
+            title: Context Blocks
+          pageId: context-blocks
+
+layout:
+  contentJustify: center # Center the contents of the page.
+  contentGutter: 16
+  size: 100
+  
+
+areas:
+  content:
+    blocks:
+      - id: genre_counts_bar_chart_card
+        type: Card
+        properties:
+          title:
+        layout:
+          size: 800
+          span: 16
+        blocks:
+          - id: title 2
+            type: Title
+            layout:
+              offset: 4
+            properties:
+              content: PageHCSF   
+
+          - id: block_id_2
+            type: Img
+            layout:
+              offset: 4
+            properties:
+              src: https://i.postimg.cc/Fszgvm5M/l2.png
+      - id: genre_counts_bar_chart_card2
+        type: Card
+        properties:
+          title: 
+        layout:
+          size: 800
+          span: 16
+        blocks:
+          - id: block_id
+            type: Title
+            layout:
+              offset: 4
+            properties:
+              content: PageHCF
+
+          - id: block_id_1
+            type: Img
+            layout:
+              offset: 4
+            properties:
+              src: https://i.postimg.cc/v83LCTj7/l1.png   
+
+      - id: genre_counts_bar_chart_card2
+        type: Card
+        properties:
+          title: 
+        layout:
+          size: 800
+          span: 16
+        blocks:
+          - id: title 3
+            type: Title
+            layout:
+              offset: 4
+            properties:
+              content: PageHeaderMenu   
+        
+          - id: block_id_3
+            type: Img
+            layout:
+              offset: 4
+            properties:
+              src: https://i.postimg.cc/xTZGT79c/l3.png
+
+      - id: genre_counts_bar_chart_card2
+        type: Card
+        properties:
+          title: 
+        layout:
+          size: 800
+          span: 16
+        blocks:
+          - id: title 4
+            type: Title
+            layout:
+                offset: 4
+            properties:
+              content: PageHSCF
+
+          - id: block_id_4
+            type: Img
+            layout:
+              offset: 4
+            properties:
+              src: https://i.postimg.cc/LstjD8L1/l4.png
+
+      - id: genre_counts_bar_chart_card2
+        type: Card
+        properties:
+          title: 
+        layout:
+          size: 800
+          span: 16
+        blocks:
+          - id: title 5
+            type: Title
+            layout:
+              offset: 4
+            properties:
+              content: PageSHCF  
+
+
+          - id: block_id_5
+            type: Img
+            layout:
+              offset: 4
+            properties:
+              src: https://i.postimg.cc/rpXS5r0T/l5.png
+
+
+      - id: genre_counts_bar_chart_card2
+        type: Card
+        properties:
+          title: 
+        layout:
+          size: 800
+          span: 16
+        blocks:
+          - id: title 6
+            type: Title
+            layout: 
+                offset: 4
+            properties:
+              content: PageSiderMenu
+          - id: block_id_6
+            type: Img
+            layout:
+              offset: 4
+            properties:
+              src: https://i.postimg.cc/Sxz6XrKV/l6.png
+      

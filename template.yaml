@@ -97,55 +97,76 @@ blocks:
 
       - id: block_id
         type: Title
+        layout:
+          offset: 4
+          
         properties:
           content: PageHCF
 
       - id: block_id_1
         type: Img
+        layout:
+          offset: 4
         properties:
           src: https://i.postimg.cc/v83LCTj7/l1.png   
 
 
       - id: title 2
         type: Title
+        layout:
+          offset: 4
         properties:
           content: PageHCSF   
 
       - id: block_id_2
         type: Img
+        layout:
+          offset: 4
         properties:
           src: https://i.postimg.cc/Fszgvm5M/l2.png
 
       - id: title 3
         type: Title
+        layout:
+          offset: 4
         properties:
           content: PageHeaderMenu   
     
       - id: block_id_3
         type: Img
+        layout:
+          offset: 4
         properties:
           src: https://i.postimg.cc/xTZGT79c/l3.png
 
 
       - id: title 4
         type: Title
+        layout:
+          offset: 4
         properties:
           content: PageHSCF
 
       - id: block_id_4
         type: Img
+        layout:
+          offset: 4
         properties:
           src: https://i.postimg.cc/LstjD8L1/l4.png
 
 
       - id: title 5
         type: Title
+        layout:
+          offset: 4
         properties:
           content: PageSHCF  
 
 
       - id: block_id_5
         type: Img
+        layout:
+          offset: 4
         properties:
           src: https://i.postimg.cc/rpXS5r0T/l5.png
 
@@ -153,12 +174,17 @@ blocks:
 
       - id: title 6
         type: Title
+        layout:
+          offset: 4
         properties:
           content: PageSiderMenu
      
 
       - id: block_id_6
         type: Img
+        layout:
+          offset: 4
+          padding-top: 5px
         properties:
           src: https://i.postimg.cc/Sxz6XrKV/l6.png
       

@@ -1,9 +1,7 @@
 id: menus
 type: PageHeaderMenu
-
 properties:
-  title: Menus # The title in the browser tab.
-
+  title: Menus 
   logo:
         src: https://i.postimg.cc/Qtn1P5zW/simbiose-Logo.png
         style:
@@ -11,15 +9,13 @@ properties:
           margin: 10px 15px;
           height: 100px;   
 layout:
-  contentJustify: center # Center the contents of the page.
+  contentJustify: center 
   contentGutter: 16
   size: 500
-  
-
 areas:
   content:
     blocks:
-      - id: genre_counts_bar_chart_card
+      - id: MenuLinkCard
         type: Card
         properties:
           title: 
@@ -31,7 +27,7 @@ areas:
             properties:
               content: 'Menu:'
               level: 4 
-          - id: block_id
+          - id: MenuLinkBlock
             type: Menu
             properties:
               selectedKeys: []
@@ -73,9 +69,7 @@ areas:
                       style: null
                   pageId: null
                   style: null
-
-
-      - id: genre_counts_bar_chart_card2
+      - id: MobileMenuCard
         type: Card
         properties:
           title: 
@@ -87,7 +81,7 @@ areas:
             properties:
               content: 'Mobile menu:'
               level: 4 
-          - id: block_id
+          - id: MobileMenuBlock
             type: MobileMenu
             properties:
               selectedKeys: []
@@ -128,24 +122,18 @@ areas:
                       style: null
                   pageId: null
                   style: null
-
-         
-      - id: genre_counts_bar_chart_card2
+      - id: ConfirmModalCard
         type: Card
         properties:
           title: 
         layout:
           span: 16 
         blocks:
-
-
           - id: legenda1
             type: Title
             properties:
               content: 'ConfirmModal:'
               level: 4 
-
-
           - id: NewModalConfirm
             type: Button
             events:
@@ -155,13 +143,12 @@ areas:
                 params:
                   blockId: block_id66
                   method: open        
-          - id: block_id66
+          - id: ConfirmModalBlock
             type: ConfirmModal
             properties:
               centered: true
               content: Modal de confirmação
-
-      - id: genre_counts_bar_chart_card2
+      - id: TabsCard
         type: Card
         properties:
           title:
@@ -190,8 +177,7 @@ areas:
                 title: Tab 3
                 icon: AlertTwoTone
             extraAreaKey: extra 
-
-      - id: genre_counts_bar_chart_card5
+      - id: CollapseCard
         type: Card
         properties:
             title:
@@ -203,7 +189,7 @@ areas:
               properties:
                 content: 'Collapse:'
                 level: 4 
-            - id: block_id
+            - id: CollapseBlock
               type: Collapse
               properties:
                 panels:
@@ -219,16 +205,3 @@ areas:
                     disabled: false
                     title: Panel 3
                     extraKey: null
-            - id: legenda3
-              type: Title
-              properties:
-                content: 'List:'
-                level: 4 
-            - id: todos
-              type: ControlledList
-              blocks:
-                - id: todos.$
-                  type: TitleInput
-                  properties:
-                    level: 4      
-          

@@ -91,3 +91,10 @@ areas:
                   type: TitleInput
                   properties:
                     level: 4    
+          - id: PageFooter
+            type: Html
+            properties:
+              html: > 
+                <div style="width: 66%; margin: auto; height: 100px;  background: #6b7d8c;">
+                  <p style="margin-top: 20px; padding-top: 40px; font-size: 1.2em; text-align: center; color: white;">Desenvolvido por equipe &copy;<b>Simbiose Ventures</b></p>
+                </div> 
